@@ -1,0 +1,107 @@
+﻿<Application x:Class="Evolution.Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Controls="clr-namespace:Evolution.Wpf.Controls" StartupUri="MainWindow.xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d">
+    <Application.Resources>
+        <Controls:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+        <Controls:ZIndexConverter x:Key="ZIndexConverter"/>
+        <Controls:MarginConverter x:Key="MarginConverter" VerticalSpacing="48" HorizontalSpacing="4"/>
+        <Controls:FoodTokenConverter x:Key="FoodTokenConverter"/>
+        <Controls:TapableConverter x:Key="TapableConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <Style x:Key="Animal" TargetType="ItemsControl">
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Controls:UICard Card="{Binding}" IsDisplayed="{Binding IsAnimalBase, Converter={StaticResource InverseBooleanConverter}}"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="FrameworkElement">
+                        <Setter Property="Panel.ZIndex">
+                            <Setter.Value>
+                                <MultiBinding Converter="{StaticResource ZIndexConverter}">
+                                    <Binding Path="."/>
+                                    <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}" Path="DataContext"/>
+                                </MultiBinding>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Margin">
+                            <Setter.Value>
+                                <MultiBinding Converter="{StaticResource MarginConverter}">
+                                    <Binding Path="."/>
+                                    <Binding RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}" Path="DataContext"/>
+                                </MultiBinding>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="VerticalAlignment" Value="Bottom"/>
+                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <RotateTransform Angle="{Binding Trait, Converter={StaticResource TapableConverter}}"/>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="RenderTransformOrigin">
+                            <Setter.Value>
+                                <Point X="0.5" Y="0.6"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <Grid/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FoodStorage" TargetType="ItemsControl">
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Image Source="{Binding Converter={StaticResource FoodTokenConverter}}" Width="32" Height="32"/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <BitmapImage x:Key="evolution" UriSource="Resources/Cards.png"/>
+        <BitmapImage x:Key="evolution-any" UriSource="Resources/evolution-any.png"/>
+        <BitmapImage x:Key="evolution-new-animal" UriSource="Resources/evolution-new-animal.png"/>
+        <BitmapImage x:Key="evolution-communication-carnivorous" UriSource="Resources/evolution-communication-carnivorous.png"/>
+        <BitmapImage x:Key="evolution-cooperation-carnivorous" UriSource="Resources/evolution-cooperation-carnivorous.png"/>
+        <BitmapImage x:Key="evolution-hibernationability-carnivorous" UriSource="Resources/evolution-hibernationability-carnivorous.png"/>
+        <BitmapImage x:Key="evolution-highbodyweight-carnivorous" UriSource="Resources/evolution-highbodyweight-carnivorous.png"/>
+        <BitmapImage x:Key="evolution-parasite-carnivorous" UriSource="Resources/evolution-parasite-carnivorous.png"/>
+        <BitmapImage x:Key="evolution-parasite-fattissue" UriSource="Resources/evolution-parasite-fattissue.png"/>
+        <BitmapImage x:Key="evolution-poisonous-carnivorous" UriSource="Resources/evolution-poisonous-carnivorous.png" />
+        <BitmapImage x:Key="evolution-burrowing-fattissue" UriSource="Resources/evolution-burrowing-fattissue.png" />
+        <BitmapImage x:Key="evolution-camouflage-fattissue" UriSource="Resources/evolution-camouflage-fattissue.png" />
+        <BitmapImage x:Key="evolution-cooperation-fattissue" UriSource="Resources/evolution-cooperation-fattissue.png" />
+        <BitmapImage x:Key="evolution-grazing-fattissue" UriSource="Resources/evolution-grazing-fattissue.png" />
+        <BitmapImage x:Key="evolution-highbodyweight-fattissue" UriSource="Resources/evolution-highbodyweight-fattissue.png" />
+        <BitmapImage x:Key="evolution-sharpvision-fattissue" UriSource="Resources/evolution-sharpvision-fattissue.png" />
+        <BitmapImage x:Key="evolution-mimicry" UriSource="Resources/evolution-mimicry.png" />
+        <BitmapImage x:Key="evolution-piracy" UriSource="Resources/evolution-piracy.png" />
+        <BitmapImage x:Key="evolution-running" UriSource="Resources/evolution-running.png" />
+        <BitmapImage x:Key="evolution-scavanger" UriSource="Resources/evolution-scavanger.png" />
+        <BitmapImage x:Key="evolution-swimming" UriSource="Resources/evolution-swimming.png" />
+        <BitmapImage x:Key="evolution-symbiosis" UriSource="Resources/evolution-symbiosis.png" />
+        <BitmapImage x:Key="evolution-tailloss" UriSource="Resources/evolution-tailloss.png" />
+        <BitmapImage x:Key="evolution-banktoken" UriSource="Resources/BankToken.png" />
+        <BitmapImage x:Key="evolution-extratoken" UriSource="Resources/ExtraToken.png" />
+        <BitmapImage x:Key="evolution-fattoken" UriSource="Resources/FatToken.png" />
+    </Application.Resources>
+</Application>

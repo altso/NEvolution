@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{739DC39A-A8C9-4D5D-B9DA-449C39F2C3A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Evolution</RootNamespace>
+    <AssemblyName>Evolution</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Stateless">
+      <HintPath>..\References\Stateless\Stateless.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimalStorage.cs" />
+    <Compile Include="BankStorage.cs" />
+    <Compile Include="ExtraFoodSource.cs" />
+    <Compile Include="FoodStorage.cs" />
+    <Compile Include="FoodToken.cs" />
+    <Compile Include="GameContext.cs" />
+    <Compile Include="IFoodSource.cs" />
+    <Compile Include="LionKing.cs" />
+    <Compile Include="Moves\DealCardsMove.cs" />
+    <Compile Include="Moves\ExtinctMove.cs" />
+    <Compile Include="Moves\FeedingMove.cs" />
+    <Compile Include="IDecisionMaker.cs" />
+    <Compile Include="LogicException.cs" />
+    <Compile Include="Moves\Move.cs" />
+    <Compile Include="Moves\AddCardMove.cs" />
+    <Compile Include="Moves\DevelopmentMove.cs" />
+    <Compile Include="Moves\NewAnimalMove.cs" />
+    <Compile Include="Moves\PassMove.cs" />
+    <Compile Include="TheOriginOfSpeciesDeck.cs" />
+    <Compile Include="TraitActions\RunningAction.cs" />
+    <Compile Include="TraitActions\TailLossAction.cs" />
+    <Compile Include="Traits\Burrowing.cs" />
+    <Compile Include="Traits\Camouflage.cs" />
+    <Compile Include="Traits\AddToAnimalContext.cs" />
+    <Compile Include="Traits\Carnivorous.cs" />
+    <Compile Include="TraitActions\CarnivorousAction.cs" />
+    <Compile Include="Traits\Communication.cs" />
+    <Compile Include="Traits\Cooperation.cs" />
+    <Compile Include="Traits\FatTissue.cs" />
+    <Compile Include="TraitActions\FatTissueAction.cs" />
+    <Compile Include="Traits\Grazing.cs" />
+    <Compile Include="TraitActions\GrazingAction.cs" />
+    <Compile Include="Traits\HibernationAbility.cs" />
+    <Compile Include="TraitActions\HibernationAbilityAction.cs" />
+    <Compile Include="Traits\HighBodyWeight.cs" />
+    <Compile Include="Traits\IAttachable.cs" />
+    <Compile Include="Traits\ITransformer.cs" />
+    <Compile Include="Traits\TraitContext.cs" />
+    <Compile Include="Traits\ISurvival.cs" />
+    <Compile Include="Traits\Mimicry.cs" />
+    <Compile Include="Traits\PairwiseTrait.cs" />
+    <Compile Include="Moves\SkipMove.cs" />
+    <Compile Include="Moves\ThrowDicesMove.cs" />
+    <Compile Include="TraitActions\EatFromBankAction.cs" />
+    <Compile Include="Traits\Parasite.cs" />
+    <Compile Include="Traits\Piracy.cs" />
+    <Compile Include="TraitActions\PiracyAction.cs" />
+    <Compile Include="Traits\Poisonous.cs" />
+    <Compile Include="Traits\Running.cs" />
+    <Compile Include="Traits\Scavanger.cs" />
+    <Compile Include="Traits\SharpVision.cs" />
+    <Compile Include="Traits\Swimming.cs" />
+    <Compile Include="Traits\Symbiosis.cs" />
+    <Compile Include="Traits\TailLoss.cs" />
+    <Compile Include="Traits\TapableTrait.cs" />
+    <Compile Include="Traits\Trait.cs" />
+    <Compile Include="TraitActions\TraitAction.cs" />
+    <Compile Include="Traits\EatFromBank.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="Traits\IUsable.cs" />
+    <Compile Include="NewDeck.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="PlayerCollection.cs" />
+    <Compile Include="Properties\JetBrains.Annotations.cs" />
+    <Compile Include="MetaObject.cs" />
+    <Compile Include="Moves\TraitsMove.cs" />
+    <Compile Include="GameDate.cs" />
+    <Compile Include="ZooKeeper.cs" />
+    <Compile Include="Animal.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Deck.cs" />
+    <Compile Include="Moves\PlayerMove.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TraitActions\TraitActions.cd" />
+    <None Include="Traits\Traits.cd" />
+    <None Include="Moves\Moves.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
