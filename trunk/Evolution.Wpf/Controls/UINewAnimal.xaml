@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Evolution.Wpf.Controls.UINewAnimal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:Evolution.Wpf.Controls" mc:Ignorable="d" Height="233" Width="159"
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="LayoutRoot" MouseDoubleClick="LayoutRootMouseDoubleClick" Visibility="{Binding CanBeSelected, ElementName=LayoutRoot, Converter={StaticResource BooleanToVisibilityConverter}}">
+    <UserControl.Resources>
+        <Controls:BooleanToOpacityConverter x:Key="BooleanToOpacityConverter"/>
+        <Storyboard x:Key="OnMouseEnter1">
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HoverBorder" To="1" Duration="0:0:0"/>
+        </Storyboard>
+        <Storyboard x:Key="OnMouseLeave1">
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HoverBorder" To="0" Duration="0:0:0" />
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Effect>
+        <DropShadowEffect ShadowDepth="0" Color="Yellow" BlurRadius="20" Opacity="{Binding CanBeSelected, ElementName=LayoutRoot, Converter={StaticResource BooleanToOpacityConverter}}" />
+    </UserControl.Effect>
+    <Grid>
+        <Image Source="{StaticResource ResourceKey=evolution-new-animal}" Stretch="None" IsEnabled="{Binding CanBeSelected, ElementName=LayoutRoot}">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                    <BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <BeginStoryboard Storyboard="{StaticResource OnMouseLeave1}"/>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Border x:Name="HoverBorder" BorderThickness="8" BorderBrush="Yellow" CornerRadius="5" Opacity="0">
+        </Border>
+    </Grid>
+</UserControl>

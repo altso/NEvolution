@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Evolution.Moves.AddCardMove" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAQEAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Moves\AddCardMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.TraitsMove" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIEAAAAQEAAAAAAAAAAAAAACAAAAAACAAEAA=</HashCode>
+      <FileName>Moves\TraitsMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.DealCardsMove" Collapsed="true">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\DealCardsMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.DevelopmentMove" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\DevelopmentMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.ExtinctMove" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\ExtinctMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.FeedingMove" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\FeedingMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.Move" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.NewAnimalMove" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAQEIABAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\NewAnimalMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.PassMove" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\PassMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.PlayerMove" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Moves\PlayerMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.SkipMove" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\SkipMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.Moves.ThrowDicesMove" Collapsed="true">
+    <Position X="16.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Moves\ThrowDicesMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

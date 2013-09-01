@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Evolution.Wpf.Controls.UICard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:Evolution.Wpf.Controls" mc:Ignorable="d"
+             xmlns:Evolution="clr-namespace:Evolution;assembly=Evolution"
+             xmlns:Traits="clr-namespace:Evolution.Traits;assembly=Evolution" Height="233" Width="159" x:Name="LayoutRoot"
+             MouseDoubleClick="LayoutRootMouseDoubleClick">
+    <UserControl.Resources>
+        <Controls:IsConverter x:Key="IsUsableTraitConverter" Type="Traits:IUsable"/>
+        <Controls:BooleanToOpacityConverter x:Key="BooleanToOpacityConverter"/>
+        <Controls:AngleConverter x:Key="AngleConverter"/>
+    </UserControl.Resources>
+    <UserControl.Effect>
+        <DropShadowEffect ShadowDepth="0" Color="Yellow" BlurRadius="20" Opacity="{Binding CanBeSelected, ElementName=LayoutRoot, Converter={StaticResource BooleanToOpacityConverter}}" />
+    </UserControl.Effect>
+    <!--
+    <UserControl.Triggers>
+        <Trigger Property="Controls:UICard.CanBeSelected" Value="True">
+            <Setter TargetName="CanBeSelectedEffect" Property="DropShadowEffect.Opacity" Value="1"/>
+        </Trigger>
+        <Trigger Property="Controls:UICard.CanBeSelected" Value="False">
+            <Setter TargetName="CanBeSelectedEffect" Property="DropShadowEffect.Opacity" Value="0"/>
+        </Trigger>
+    </UserControl.Triggers>
+    -->
+    <Grid MouseEnter="GridMouseEnter" MouseLeave="GridMouseLeave" Height="233" Width="159">
+        <Image x:Name="FaceImage" Source="{StaticResource ResourceKey=evolution}" Stretch="None">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="FaceImageRotateTransform" Angle="{Binding Card, ElementName=LayoutRoot, Converter={StaticResource AngleConverter}}"/>
+            </Image.RenderTransform>
+            <Image.RenderTransformOrigin>
+                <Point X="0.5" Y="0.5"/>
+            </Image.RenderTransformOrigin>
+        </Image>
+        <Border x:Name="HoverBorder" BorderThickness="8" BorderBrush="Yellow" CornerRadius="5" Visibility="Hidden">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{Binding Card.Trait.Name, ElementName=LayoutRoot}" HorizontalAlignment="Center" Foreground="#2B5527" Background="#F2F8EA" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Margin" Value="0,0,4,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Button Click="TurnClick">Turn</Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

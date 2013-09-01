@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Evolution.TraitActions.CarnivorousAction" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TraitActions\CarnivorousAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.TraitActions.TraitAction" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TraitActions\TraitAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.TraitActions.EatFromBankAction" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TraitActions\EatFromBankAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.TraitActions.FatTissueAction" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TraitActions\FatTissueAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.TraitActions.GrazingAction" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TraitActions\GrazingAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.TraitActions.HibernationAbilityAction" Collapsed="true">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TraitActions\HibernationAbilityAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Evolution.TraitActions.PiracyAction" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TraitActions\PiracyAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
