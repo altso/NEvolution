@@ -42,10 +42,11 @@
 
         protected internal void Add(Card card)
         {
+            int index = this.list.Count;
             this.list.Add(card);
             this.OnPropertyChanged("Count");
             this.OnPropertyChanged("Item[]");
-            this.OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, card));
+            this.OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, card, index));
         }
 
         protected internal void Remove(Card card)
